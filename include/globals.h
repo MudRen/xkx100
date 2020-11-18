@@ -71,6 +71,7 @@
 #define UPDATE_D                  "/adm/daemons/updated"
 #define VIRTUAL_D                 "/adm/daemons/virtuald"
 #define WEAPON_D                  "/adm/daemons/weapond"
+#define TIME_D                    "/adm/daemons/timed"
 
 #define CLASS_D(x)                ("/kungfu/class/" + x)
 #define SKILL_D(x)                ("/kungfu/skill/" + x)
@@ -176,5 +177,8 @@
 // in effect.
 
 #undef PROFILE_COMMANDS
+
+// mudcore 框架头文件
+#include <mudcore.h>
 
 #endif
