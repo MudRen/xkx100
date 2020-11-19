@@ -140,8 +140,8 @@ void log_error(string file, string message)
             else
                 efun::write(get_config(__DEFAULT_ERROR_MESSAGE__) + "\n");
         }
-        efun::write_file(home + "log", message);
     }
+    efun::write_file(home + "log", message);
 }
 
 // save_ed_setup and restore_ed_setup are called by the ed to maintain
