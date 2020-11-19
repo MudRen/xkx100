@@ -50,7 +50,7 @@ void greeting(object ob)
 int accept_object(object who, object ob)
 {
 	
-	object myenv ;		
+   
 	if (ob->query("money_id") && ob->value() >= 100)
 	{
 	  if ((int)this_player()->query_temp("ridechance")<=2)

@@ -56,7 +56,7 @@ void init()
 
 int accept_object(object who, object ob)
 {
-	object obj;
+ 
 	object me=this_player();
 
 	if (query("book_count"))
@@ -287,7 +287,7 @@ int pieshuang(object me)
 
 int yesorno()
 {
-	object me=this_player();
+ 
 
 	if (i1==1 || i2==1)
 		if(sumi<12) sumi=sumi+10;

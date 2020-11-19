@@ -602,7 +602,7 @@ void  game_result()
 
 void  pay_player(object  me,  int  total)
 {
-	object  pay_hundcash,  pay_cash,  pay_gold,  pay_silver;
+ object   pay_gold,  pay_silver;
 
 /*	if(total/10000 >  0)
 	{
@@ -650,7 +650,7 @@ int  pay_out(object  me,  int  total)
   //then  destroy  all  his  cash,  gold,  silver...then  pay  him  back  the  difference.
 
 	int  diff;
-	object  hundcash,  cash,  gold,  silver;
+ object   gold,  silver;
 
 	diff  =  check_silver(me)  -  total;
 	if(  diff  <  0  )  return  0;
@@ -696,7 +696,7 @@ int  do_look(string  arg)
 	object  zhuang;
 	object  *inv  =  all_inventory(this_object());
 	int  i;
-	object  me  =  this_player();
+ 
 
 	if(arg  ==  "table")
 	{

@@ -38,7 +38,7 @@ void init()
 
 int do_open(string arg)
 {
-	object me=this_player();
+ 
 
 	if( !arg || arg != "bridge" ) {
 		return notify_fail("你乱叫什么？\n");
@@ -56,4 +56,3 @@ void close(object room)
 	message("vision","吊桥又“嘎嘎”地升了起来，把城门挡住了。\n", room);
 	room->delete("exits/north");
 }
-

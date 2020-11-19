@@ -231,7 +231,7 @@ void  boost_guis  (int  *res)
 void  gamble_perform  ()
 {
     object  room  =  this_object();
-    object  ji;
+    
 
     tell_room  (room,"\n\n");
     display_gui  (0,"长寿龟",room);
@@ -373,7 +373,7 @@ int  do_fight  (string  arg)
 int  do_steal  (string  arg)
 {
     object  who  =  this_player();
-    object  room  =  this_object();
+    
 
     message_vision  ("$N想偷龟。\n",who);
     message_vision  ("青鬏龟童对$N说道：大人窃龟也不羞脸。\n",who);
@@ -402,7 +402,7 @@ int  do_kill  (string  arg)
 int  do_cast  (string  arg)
 {
     object  who  =  this_player();
-    object  room  =  this_object();
+    
 
     message_vision  ("$N龟模龟样地念了几句咒语。\n",who);
     message_vision  ("青鬏龟童对$N说道：大人，莫念莫念，切莫伤您龟寿。\n",who);
@@ -412,7 +412,7 @@ int  do_cast  (string  arg)
 int  do_exert  (string  arg)
 {
     object  who  =  this_player();
-    object  room  =  this_object();
+    
 
     message_vision  ("$N想借龟施功。\n",who);
     message_vision  ("青鬏龟童对$N说道：大人在这里练功会损了您的龟寿。\n",who);
@@ -422,7 +422,7 @@ int  do_exert  (string  arg)
 int  do_perform  (string  arg)
 {
     object  who  =  this_player();
-    object  room  =  this_object();
+    
 
     message_vision  ("$N想借龟施功。\n",who);
     message_vision  ("青鬏龟童对$N说道：大人在这里练功会损了您的龟寿。\n",who);

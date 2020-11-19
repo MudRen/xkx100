@@ -88,7 +88,7 @@ int accept_object(object who, object ob)
 
 void die()
 {
-        int i;
+        
         object killer;
 
         if(objectp(killer = query_temp("last_damage_from")))
@@ -97,4 +97,3 @@ void die()
 
         ::die();
 }
-

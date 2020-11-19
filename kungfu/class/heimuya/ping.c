@@ -86,7 +86,7 @@ void init()
 
 void greeting(object ob)
 {
-	int eff_qi, max_qi, hurt, i;
+ int eff_qi, max_qi, hurt;
 
 	if (!ob || environment(ob)!=environment(this_object()))
 		return ;
@@ -261,7 +261,7 @@ int ask_heal()
 {
 	object ob = this_player();
 	object me = this_object();
-	object where;
+ 
 
         if(me->is_fighting() || me->query_temp("busy"))
         {
@@ -331,7 +331,7 @@ int ask_poison()
 {
 	object ob = this_player();
 	object me = this_object();
-	object where;
+ 
 
         if(me->is_fighting() || me->query_temp("busy"))
 	{

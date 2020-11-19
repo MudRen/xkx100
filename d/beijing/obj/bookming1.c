@@ -27,7 +27,7 @@ void create()
 
 int do_shake(string arg)
 {
-	object me,goldleaf1,goldleaf2;
+ object me;
 	me = this_player();
 
   if( !arg || arg=="" ) return 0;
@@ -37,7 +37,6 @@ int do_shake(string arg)
 	return 1;
 	}
 }	
-
 
 
 

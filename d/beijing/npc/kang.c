@@ -66,8 +66,8 @@ void init()
 
 void greeting(object ob)
 {
-	int i;
-	object man,*obj;
+ 
+ object man;
 
 	if( !ob || environment(ob) != environment() ) return;
 	if (file_name(environment(ob)) != "/d/beijing/shufang") return;

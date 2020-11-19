@@ -114,7 +114,7 @@ void close_passage()
 
 int do_insert(string arg)
 {
-	string dir;
+ 
 	object ob, me = this_player();
 
 	if( !arg || arg=="" ) return 0;

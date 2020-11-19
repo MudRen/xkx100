@@ -16,7 +16,7 @@ inherit NPC;
 	string *tynick=({HIM"烟霞神龙",HIG"双掌开碑",HIC"流星赶月",HIB"八步赶蟾、赛专诸、踏雪无痕、独脚水上飞、双刺盖七省"});
 void create()
 {
-	int i, j;
+ int i;
 	switch (random(10))
 	{
 		case 0:
@@ -71,4 +71,3 @@ void create()
 	carry_object("/clone/weapon/changjian")->wield();
 	add_money("silver", 2);
 }
-

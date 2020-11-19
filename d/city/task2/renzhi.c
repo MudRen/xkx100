@@ -291,7 +291,7 @@ int do_order(string arg)
 	string act,sth,dest,dest_add;
 	int give_exp,give_pot,give_score;
 	int i;
-	object room,shashou,anshazhe;
+ object room,shashou;
 	string ss_name;
 
 	if ( query("leader_name") != me->query("id") )
@@ -415,7 +415,7 @@ void do_check()
 {
 	object me,shashou;
 	string ss_name;
-	int i;
+ 
 	mapping exits;
 	string * dirs;
 	object ob = this_object();
@@ -510,4 +510,3 @@ string status_color(int current, int max)
 	if( percent >= 10 ) return HIR;
 	return RED;
 }
-

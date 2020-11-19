@@ -23,7 +23,7 @@ LONG );
 void init()
 {
 	object ob = this_player();
-	mapping fam;
+ 
 	if ((strsrch(NATURE_D->game_time(), "一月") >= 0) ||
 	   (strsrch(NATURE_D->game_time(), "二月") >= 0))
 	{
@@ -53,4 +53,3 @@ void south2( object ob )
 "\n终于到港了，满身疲倦的你脚踏实地仍有虚浮的感觉。\n\n" NOR) ;
 	ob->move ("/d/beijing/haigang");
 }
-

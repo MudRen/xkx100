@@ -60,7 +60,7 @@ void init()
 }
 int ask_me()
 {
-	object ob,me;
+ object me;
 	me = this_player();
 	if(me->query("officerlvl") < 1)
 	{
@@ -74,7 +74,7 @@ int ask_me()
 }
 int ask_stop()
 {
-	object ob,me;
+ object me;
 	me = this_player();
 	if (!(int)me->query_temp("bt/working"))
 	{
@@ -88,7 +88,7 @@ int ask_stop()
 }
 int do_answer(string arg)
 {
-	object ob,me;
+ object me;
 	me = this_player();
 	if (!me->query_temp("bt/stop")) return notify_fail("什么？\n");
 	if (!arg || (arg !="yes"&&arg !="no"))
@@ -109,4 +109,3 @@ int do_answer(string arg)
 	me->apply_condition("bt_stop", 10);
 	return 1;
 }
-

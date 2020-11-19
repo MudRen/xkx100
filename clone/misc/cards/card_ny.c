@@ -26,8 +26,8 @@ void init()
 int do_dakai(string arg)
 {
         object me = this_player();
-        string message;
-        int col;
+        
+        
 
         if (!present(this_object(), this_player()))
                 return 0;
@@ -53,7 +53,7 @@ int do_chaikai(string arg)
 {
         object newcard, box, obj0, obj1, obj2, obj3;
         object me = this_player();
-        int col;
+        
 
         if (!present(this_object(), this_player()))
                 return 0;

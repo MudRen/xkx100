@@ -34,7 +34,7 @@ void create()
 }
 void init()
 {
-        object ob,me;
+        
         add_action("do_name","name");
 }
 int accept_object(object me, object ob)
@@ -56,8 +56,8 @@ int accept_object(object me, object ob)
 }
 void ouyezi_stage(object ob, int stage)
 {
-        int i;
-        object *inv;
+        
+        
         if( !ob || !present(ob) )
         return;
         tell_object(ob, ouyezi_msg[stage]);

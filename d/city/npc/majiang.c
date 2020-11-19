@@ -1086,7 +1086,7 @@ int wash_mj(int amount)
 	int i,x;
 	string str,countstr="";
 	mapping who;
-	object ob;
+
 	mixed *X,MjE_Data = ([
 "1w" : 0,"2w" : 0,"3w" : 0,"4w" : 0,"5w" : 0,"6w" : 0,"7w" : 0,"8w" : 0,"9w" :0,
 "1s" : 0,"2s" : 0,"3s" : 0,"4s" : 0,"5s" : 0,"6s" : 0,"7s" : 0,"8s" : 0,"9s" :0,
@@ -1355,7 +1355,7 @@ string show_mj(string str,int flag)
 	string str1, str2;
 
 	string Mj="",Mj1="";
-	int size=strwidth(str)+2,a,b;
+ int size=strwidth(str)+2,a;
 
 	if(sizeof(str)>60){
 		str1 = str[sizeof(str)-60..sizeof(str)-1];
@@ -1594,8 +1594,8 @@ mixed do_check_num(string str,int flag)
 
 void check_flower(mapping who)
 {
-	string newstr = "",str=who["Mj"],temp,temp1;
-	int i = strwidth(str),j;
+ string newstr = "",str=who["Mj"],temp;
+ int i = strwidth(str);
 
 	for(; i>=0; i-=2){
 	      //i--;
@@ -1629,7 +1629,7 @@ int do_check_Mj(string datastr,string str)
 }
 string do_delete_Mj(string datastr,string str,int amount)//把某牌去掉
 {
-	int size=strwidth(datastr),check;
+ int size=strwidth(datastr);
 	string temp="";
 
 	for( ;size>=0; size-=2)
@@ -1652,7 +1652,7 @@ string sort_data(string str)
 {
 	int i = strwidth(str),a,b,c,d;
 
-	string newstr="",temp="";
+ string temp="";
 	for (a=-1;a<i;a++){
 	    a++;
 	    for (b=a+2;b<i;b++){
@@ -1672,7 +1672,7 @@ int do_look(string arg)
 {
 	int i,l;
 	object me=this_player();
-	string Mj="",p1o="",p2o="",p3o="",p4o="", str;
+ string Mj="",p1o="",p2o="",p3o="",p4o="";
 	mapping who;
 
 	if (query_verb()==".")	arg="mj";
@@ -1706,7 +1706,7 @@ int do_look(string arg)
 	      Mj+=who["Id"]+"：手中的牌有：\n";
 	      Mj+=show_mj(who["Mj"],i);
 	   }
-	   Mj+=who["Id"]+"：摆\在外面的牌有：\n";
+	   Mj+=who["Id"]+"：摆在外面的牌有：\n";
 	   Mj+=show_mj(who["Out"]+who["OutPon"]+who["OutFlower"],i+1);
 	   Mj+=who["Id"]+"：打过的牌：\n";
 	   Mj+=show_mj(who["Dump"],2);
@@ -1730,13 +1730,13 @@ int do_look(string arg)
 	      if (who["Show"]=="color") i=5;
 	      tell_object(me, "现在是["+TIMES+"] 庄家 "+HIY+present(NowPlayerId[0])->query("name")
 	      	+"("+NowPlayerId[0]+")"+NOR+"\n" );
-	      Mj+=HIG+"东桌  "+NOR+present(P1Data["Id"])->query("name")+"("+P1Data["Id"]+")"+"：摆\在外面的牌有：\n";
+	      Mj+=HIG+"东桌  "+NOR+present(P1Data["Id"])->query("name")+"("+P1Data["Id"]+")"+"：摆在外面的牌有：\n";
 	      Mj+=show_mj(next_data(P1Data["Id"], 0, "allout"),i+1);
-	      Mj+=HIG+"南桌  "+NOR+present(P2Data["Id"])->query("name")+"("+P2Data["Id"]+")"+"：摆\在外面的牌有：\n";
+	      Mj+=HIG+"南桌  "+NOR+present(P2Data["Id"])->query("name")+"("+P2Data["Id"]+")"+"：摆在外面的牌有：\n";
 	      Mj+=show_mj(next_data(P2Data["Id"], 0, "allout"),i+1);
-	      Mj+=HIG+"西桌  "+NOR+present(P3Data["Id"])->query("name")+"("+P3Data["Id"]+")"+"：摆\在外面的牌有：\n";
+	      Mj+=HIG+"西桌  "+NOR+present(P3Data["Id"])->query("name")+"("+P3Data["Id"]+")"+"：摆在外面的牌有：\n";
 	      Mj+=show_mj(next_data(P3Data["Id"], 0, "allout"),i+1);
-	      Mj+=HIG+"北桌  "+NOR+present(P4Data["Id"])->query("name")+"("+P4Data["Id"]+")"+"：摆\在外面的牌有：\n";
+	      Mj+=HIG+"北桌  "+NOR+present(P4Data["Id"])->query("name")+"("+P4Data["Id"]+")"+"：摆在外面的牌有：\n";
 	      Mj+=show_mj(next_data(P4Data["Id"], 0, "allout"),i+1);
 	}else if (arg=="chicken"){
 		 if (Playing){
@@ -1959,7 +1959,7 @@ int set_mjdata(object me,int *winner)
 int *get_mjdata(string Id)
 {
 	int i,check,*winner=({0,0,0,0});
-	string str="";
+
 	mixed *MjData;
 
 	if (!Id) return 0;
@@ -2141,14 +2141,14 @@ int ch(string str)
 void dump_what( object me )
 {
 	mapping who;
-	int t,k,W,T,S,Sp;
+
 	//string tempW="",tempT="",tempS="",tempB="", Mj;
 	mapping Temp = ([ "tempW": "", "tempT": "", "tempS": "", "tempB": "" ]);
-	string Special="1w9w1s9s1t9tdfnfxfbfhzfaba";
-	string str_out;
-	int size,i;
 
-	int pos;	//字串的位置
+	string str_out;
+
+
+  //字串的位置
 
 	Temp["tempB"]="";
 	Temp["tempW"]="";
@@ -2303,8 +2303,8 @@ int undo_pause(object me)
 //NPC的行动
 int npc_action( object me )
 {
-	string str, str1, str2, str3;
-	int i, num1, num2, num3;
+ string str;
+ int i;
 	object ob;
 	mapping who;
 
@@ -2510,7 +2510,7 @@ int do_continue(object me)
 string filt_mj(string strW, object me)
 {
 	int i,j,check;
-	int k,t;
+ int t;
 	int A,B,C,D,E,F;
 	mapping who;
 
@@ -2664,7 +2664,7 @@ string filt_mj(string strW, object me)
 int filt_hu_color(string strW, object me)
 {
 	int i,j,check;
-	int k,t;
+ int t;
 	int A,B,C,D,E,F;
 	mapping who;
 

@@ -26,7 +26,7 @@ LONG );
 }
 int valid_leave(object me, string dir)
 {
-	int c_exp,c_skill;
+ 
 	if (userp(me))
 	if (dir == "west" )
 	{

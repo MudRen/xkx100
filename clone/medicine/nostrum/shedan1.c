@@ -16,7 +16,7 @@ void create()
 }
 int do_eat(string arg)
 {
-	int taoism_limit, jingli_limit;
+ 
 	object me = this_player();
 
 	if(!id(arg)) return notify_fail("你要吃什么？\n");
@@ -33,4 +33,3 @@ int do_eat(string arg)
 	destruct(this_object());
 	return 1;
 }
-

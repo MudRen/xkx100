@@ -213,7 +213,7 @@ string ask_ling()
 {
 	mapping fam;
 	object *allob,env,ob,me=this_player();
-	string *sname;
+ 
 	int i, count, here = 0;
 
 	if (query("ling_count") < 1)
@@ -254,4 +254,3 @@ string ask_ling()
 	return "好吧，凭这面五毒令，你可去要回你的毒虫。";
 
 }
-

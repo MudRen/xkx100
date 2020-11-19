@@ -62,7 +62,7 @@ void init()
 
 void killing(object ob)
 {
-	int player_exp,exp,min;
+ int player_exp,exp;
   exp=(int)this_object()->query("combat_exp",1);
   player_exp=(int)ob->query("combat_exp",1);
 //        min=(int)exp-5000;
@@ -125,4 +125,3 @@ int random_move()
 	command("go " + dir);
         return 1;
 }
-

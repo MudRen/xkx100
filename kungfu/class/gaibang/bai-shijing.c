@@ -103,9 +103,9 @@ void destroying(object me, object obj)
 string ask_quit()
 {
 	mapping fam;
-	object ob,me=this_player();
-	string *sname;
-	int i;
+ object me=this_player();
+ 
+ 
 
 	if (!(fam = me->query("family")) || fam["family_name"] != "丐帮")
 		return RANK_D->query_respect(me) +
@@ -154,4 +154,3 @@ $n冷笑着道：“你去吧，解下背上布袋，自今而后，丐帮中没
 	this_player()->delete("party");
 	return 1;
 }
-

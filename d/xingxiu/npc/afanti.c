@@ -181,7 +181,7 @@ void destroying(object me, object obj)
 }
 int do_answer(string arg)
 {
-        object me,gold;
+        object me;
         int soln,riddle;
         me = this_player();
         riddle = this_player()->query_temp("marks/谜");

@@ -279,7 +279,7 @@ string ask_job()
 	object me;
 	object ob;
 	int time;
-	mapping target, fam;
+ mapping target;
   	ob=this_player();
 	me=this_object();
 /*

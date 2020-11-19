@@ -65,7 +65,7 @@ int init()
 int ask_kiss()
 {
 	object me;
-	string new_name,new_id,host_id;
+ string host_id;
 	me=this_player();
 	if(query("id")!="shuang er")
 	{
@@ -205,9 +205,9 @@ message_vision("双儿眼泪汪汪地望着主人$N，说：主人待我好，�
 
 int do_sha(string arg)
 {
-	int i ;
+ 
 	object me,ob;
-	object* obj;
+ 
 	me = this_object();
 	if(!arg||!objectp(ob=present(arg,environment(me))))
 		return notify_fail("双儿说: 主人你要双儿杀谁？\n");
@@ -224,4 +224,3 @@ int do_sha(string arg)
 	}
 	return 1;
 }
-

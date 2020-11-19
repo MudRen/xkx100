@@ -292,7 +292,7 @@ void greeting(object ob)
 
 int accept_object(object who, object ob)
 {
-	object myenv ;		
+   
 	if (ob->query("money_id") && ob->value() >= 100)
 	{
 		if ((int)who->query_temp("ridechance")<=2)
@@ -403,4 +403,3 @@ int do_ride(string arg)
 	ob->delete_temp("marks/horserent");
 	return 1;
 }
-

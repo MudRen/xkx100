@@ -48,7 +48,7 @@ void  reset_balance(object  me)
 {
 	int  myexp=me->query("combat_exp")/1000;
 	int  allowed,  removed_gold;
-	string  myid=me->query("id");
+ 
 	string  NPCNAME="铁算盘";
 
 	if(myexp<1)  myexp=1;
@@ -69,4 +69,3 @@ void  reset_balance(object  me)
 	}
 	return;
 }
-

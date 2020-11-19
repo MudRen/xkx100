@@ -240,7 +240,7 @@ int waiting(object me)
 
 int preparing(object me, object fighter)
 {
-	object monk, room, ob;
+ object  room;
 
 	if(!( room = find_object("/d/tianlongsi/banruotai")) )
 	room = load_object("/d/tianlongsi/banruotai");
@@ -263,7 +263,7 @@ int preparing(object me, object fighter)
 int fighting(object me, object fighter, int count)
 {
 	object monk1, monk2, room1, room2;
-	object book;
+ 
 
 	if(!( room1 = find_object("/d/tianlongsi/munitang")) )
 	room1 = load_object("/d/tianlongsi/munitang");
@@ -318,7 +318,7 @@ int fighting(object me, object fighter, int count)
 int do_recruit(object me, object fighter)
 {
 	object book;
-	mapping ft_fam, my_fam;
+ 
 
 	fighter->delete_temp("beat_count");
 	fighter->delete_temp("fighting");
@@ -349,7 +349,7 @@ int do_recruit(object me, object fighter)
 int do_back(object me)
 {
         object monk, room1, room2;
-	int i;
+ 
 
 	message("vision", "\n枯荣大师挥了挥手，回身步入牟尼堂。\n", environment(me) );
 

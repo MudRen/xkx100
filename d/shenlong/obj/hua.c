@@ -18,7 +18,7 @@ void create()
 
 int do_eat(string arg)
 {
-	int force_limit, neili_limit, force_skill, add_skill, improve;
+ int force_limit, neili_limit, force_skill;
 	object me = this_player();
 	force_limit = me->query_skill("force")*10;
 	neili_limit = me->query("max_neili");
@@ -35,4 +35,3 @@ int do_eat(string arg)
 	destruct(this_object());
 	return 1;
 }
-

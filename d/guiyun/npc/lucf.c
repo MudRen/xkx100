@@ -182,7 +182,7 @@ int do_kill(string arg)
 {
 	object ob;
 	object me = this_player();
-	int perform, payed;
+ 
 
 	if (!arg) return 0;
 	ob = present(arg, environment(me));

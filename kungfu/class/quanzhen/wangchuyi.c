@@ -92,7 +92,7 @@ void create()
 
 int accept_object(object who, object ob)
 {
-        object obj1,obj2,obj3,obj4;
+        
         object me=this_player();
 
         if( !who || environment(who) != environment() ) return 0;
@@ -155,4 +155,3 @@ void attempt_apprentice(object ob)
 {
         command("say 我不收弟子，你去找别的道长吧。");
 }
-

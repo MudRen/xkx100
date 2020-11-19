@@ -35,7 +35,7 @@ void init()
 }
 int do_climb(string arg)
 {
-	string dir;
+ 
 	object me=this_player();
 
 	if( !arg || arg=="" ) {write("你想爬什么？\n");return 1;}

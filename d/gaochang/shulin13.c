@@ -33,7 +33,7 @@ LONG
 void init()
 {
 	object ob, room;
-	mapping fam;
+ 
 
 	int i = random(2);
 	if( i == 0) return;

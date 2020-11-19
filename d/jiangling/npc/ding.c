@@ -57,7 +57,7 @@ int recognize_apprentice(object ob)
 
 int accept_object(object who, object ob)
 {
-	object me = this_player();
+ 
 	if (!(int)who->query_temp("mark/丁"))
 		who->set_temp("mark/丁", 0);
 	if (ob->query("id") == "green flower")
@@ -70,7 +70,7 @@ int accept_object(object who, object ob)
 
 int ask_skill1()
 {
-	object ob = this_object();
+ 
 	object who = this_player();
 	
 	if (!who->query_temp("mark/丁")) return 0;
@@ -90,7 +90,7 @@ int ask_skill1()
 }
 int ask_skill2()
 {
-	object ob = this_object();
+ 
 	object who = this_player();
 	
 	if (!who->query_temp("mark/丁")) return 0;

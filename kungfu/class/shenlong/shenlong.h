@@ -3,7 +3,7 @@
 
 int do_join(string arg)
 {
-	object me, ob, obj ;
+ object me, ob;
 	string men;
 	mapping party;
 
@@ -55,4 +55,3 @@ int do_join(string arg)
 	message_vision("$N对$n说道：那你就暂时在本教"+men+"龙使" NOR+"座下效力吧！\n", me, ob);
 	return 1;
 }
-

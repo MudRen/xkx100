@@ -100,7 +100,7 @@ void die()
 {
         object ob = this_object();
         object me,fme;
-        int pot,exp,level,score;
+        int pot,exp,score;
         me = ob->query_temp("last_damage_from");
         fme = ob->query_temp("last_opponent");
         if( fme && me->query("id")==fme->query("id"))        

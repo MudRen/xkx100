@@ -36,7 +36,7 @@ void create()
 }
 int do_watch(string arg)
 {
-	object obj,new_obj;
+ object obj;
 	object me = this_player();
 	object ob = this_object();
 	string targ;
@@ -162,4 +162,3 @@ int do_catch(string arg)
 	me->delete_temp("bt/faxian");
 	return 1;
 }
-

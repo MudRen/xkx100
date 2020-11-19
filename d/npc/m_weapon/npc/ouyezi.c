@@ -145,7 +145,7 @@ int accept_object(object who, object ob)
 
 int do_answer(string arg)
 {
-	object me,w_or;
+ object me;
 	me = this_player();
 	if(!(me->query_temp("get_orc") ) )
 	{

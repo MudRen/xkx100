@@ -99,7 +99,7 @@ void attempt_apprentice(object ob)
 {
 	object me;
 	mapping ob_fam, my_fam;
-	string name, new_name;
+ string name;
 
 	me = this_object();
 	my_fam  = me->query("family");

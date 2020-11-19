@@ -24,7 +24,7 @@ void create()
 }
 void init()
 {
-	object ob;
+ 
 
 	::init();
 	add_action("do_list", "list");

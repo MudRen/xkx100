@@ -46,7 +46,7 @@ void create()
 
 int ask_back()
 {    
-	object ob;
+ 
 	object me=this_player();
 	if ( present("map", me))
 	{
@@ -73,4 +73,3 @@ int ask_wuaer()
 	this_object()->kill_ob(this_player());
 	return 1;
 }
-

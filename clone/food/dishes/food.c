@@ -67,8 +67,8 @@ void init ()
 
 int do_eat (string arg)
 {
-  object me = this_object();
-  object who = this_player();
+  
+  
 
   return ::do_eat(arg);
 }
@@ -88,4 +88,3 @@ int do_get (string arg)
   }
   return 0;
 }
-

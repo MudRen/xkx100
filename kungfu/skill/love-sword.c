@@ -46,7 +46,7 @@ mapping *action = ({
 //3
 ([ "action" :NOR"                                  "HBRED"==那一剑的凄然=="NOR"\n"NOR+
              HIW"$N心静，手稳，闷哼一声，手中$w"HIW"已刺出点点银光，像一记无意的顾盼，刻意的雷极，\n"
-            +HIW"直击$n，剑影如深深的恨，浅浅的梦，又似岁月的泪\痕！"NOR,
+            +HIW"直击$n，剑影如深深的恨，浅浅的梦，又似岁月的泪痕！"NOR,
                "dodge"  :        -10,
                "move"   :          0,
                "damage" :        180,
@@ -151,20 +151,20 @@ void two(object me,object victim,object weapon,int damage)
      if (!userp(previous_object())) sk=120;
      mk = me->query("MKS");
      if(mk<8500) {damage = 3*sk;mk1=5;}
-     else 
+     else
      	if(mk<9000) {damage = 3*sk;mk1=4;}
-     else 
+     else
      	if(mk<9500) {damage = 3*sk;mk1=3;}
-     else 
+     else
      	if(mk<10000) {damage = 3*sk;mk1=2;}
      else {damage = 3*sk;mk1=1;}
 
-	if( bell<100 
-//	&& me->query_skill_mapped("sword") == "love-sword"  
-//	&& me->query_skill_mapped("parry") == "dream-blade"  
+	if( bell<100
+//	&& me->query_skill_mapped("sword") == "love-sword"
+//	&& me->query_skill_mapped("parry") == "dream-blade"
 	&& damage>0)
  	{
-   		message_vision(HIW"\n       刀像一阵风，剑像一缕\烟，来得就像是流水那么自然，不但有了生命，也有了灵气，更有了杀气\n\n"
+   		message_vision(HIW"\n       刀像一阵风，剑像一缕烟，来得就像是流水那么自然，不但有了生命，也有了灵气，更有了杀气\n\n"
                 	       HIW"                          美丽．光华在闪动．变幻．高高在上．轻云飘忽\n\n"
                   	       HIW"                   $n只觉得这道光华仿佛就在自己眉宇间，又仿佛在虚无缥缈间\n\n"
                   	       HIW"                   它的变化，几乎已超越了人类能力的极限，几乎已令人无法相信\n\n"NOR,me,victim);
@@ -219,7 +219,7 @@ message_vision("
 
 message_vision("
 
-"HIY"--无情不似多情苦．一寸还成千万缕\--"NOR"
+"HIY"--无情不似多情苦．一寸还成千万缕--"NOR"
 "HIR"                                       剑意孤独，灰飞烟灭，仿佛幻出了岁月无奈\n"NOR,me,victim);
              victim->receive_damage("qi",skillb);
              COMBAT_D->report_status(victim);
@@ -242,11 +242,11 @@ void lockman(object me,object victim,object weapon,int damage)
         int sk = me->query_skill("love-sword",1);
         if (!userp(previous_object())) sk=120;
         mk = (int)me->query("MKS",1);
-        mecor = me->query("cor") + me->query("cps") 
+        mecor = me->query("cor") + me->query("cps")
               + me->query("combat_exp")/100000 ;
-        victimcor = victim->query("cor") + victim->query("cps") 
+        victimcor = victim->query("cor") + victim->query("cps")
                   + victim->query("combat_exp")/100000 ;
-        if(!me->query_temp("lockman") && me->query("force") > 50 
+        if(!me->query_temp("lockman") && me->query("force") > 50
         && mk < 10000 && damage > 0)
         {
                me->set_temp("lockman",1);
@@ -358,7 +358,7 @@ void power_slash(object me,object victim, object weapon,int damage)
      break;
      case 2 :
      message_vision(sprintf("\n                               "HBWHT"．．上天不负有心人．．\n"NOR),me,victim);
-     message_vision(sprintf(HIW"半空剑光化作电光，霹雳击下，剑意切入了$n中，卷入了剑气，剑光一闪而殁\．． \n"NOR),me,victim);
+     message_vision(sprintf(HIW"半空剑光化作电光，霹雳击下，剑意切入了$n中，卷入了剑气，剑光一闪而殁．． \n"NOR),me,victim);
      break;
      case 3 :
      message_vision(sprintf("\n                               "HBMAG"．．多情自古空余恨．．\n"NOR),me,victim);
@@ -411,7 +411,7 @@ message_vision(sprintf(HIB"                       --<<蓝>>剑意有如乱蝉嘶
 message_vision(sprintf(CYN"                       --<<靛>>剑意有如照无眠．悲欢离合．何似在人间--\n"NOR),me,victim);
      break;
      case 7:
-message_vision(sprintf(MAG"                       --<<紫>>剑意有如追忆思．酒入愁肠．化作相思泪\--\n"NOR),me,victim);
+message_vision(sprintf(MAG"                       --<<紫>>剑意有如追忆思．酒入愁肠．化作相思泪--\n"NOR),me,victim);
      break;
      }
      if( sk > random(30)+100)

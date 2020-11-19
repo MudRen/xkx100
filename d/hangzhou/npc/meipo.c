@@ -31,7 +31,7 @@ void create()
 
 void init()
 {
-        object ob;
+        
 
         ::init();
         add_action("do_marry", "marry");
@@ -40,7 +40,7 @@ void init()
 
 int do_marry(string arg) {
         object marry_card1,marry_card2, obj, me;
-        object *list,ob;
+        object *list;
         int i, have_marry;
         me = this_player();
         list = all_inventory(me);
@@ -110,7 +110,7 @@ int do_marry(string arg) {
 int do_unmarry(string arg)
 {
         object marry_card1,marry_card2,  me;
-        object *list,ob, couple_ob;
+        object *list, couple_ob;
         int i, have_marry;
         string target, tmpstr1, tmpstr2,str1,str2;
         string cardname;

@@ -39,7 +39,7 @@ void init()
 
 void check_trigger()
 {
-        object room;
+        
         if( (int)query("trigger")==9
         &&      !query("exits/north") ) {
                 message("vision",
@@ -53,7 +53,7 @@ HIW "大石终于被推开了，露出通向石屋的通道。\n" NOR,
 
 int do_push(string arg)
 {
-        string dir;
+        
         object me = this_player();
 
         if( me->is_busy() ) {

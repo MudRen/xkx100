@@ -34,7 +34,7 @@ int do_du(string arg)
         object me = this_player();
         object where = environment(me);
         object ob;
-        mapping skill;
+        
         int pxlevel; 
 	int neili_lost;
 
@@ -197,4 +197,3 @@ int do_join()
 	return 1;
 }
 int query_autoload() { return 1; }
-

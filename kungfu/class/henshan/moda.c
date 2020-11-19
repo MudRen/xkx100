@@ -137,9 +137,9 @@ mixed ask_jian()
         object me;
         object ob;
         object owner;
-        object *oblist;
+        
         object temp;
-        int i;
+        
 
         me = this_player();
         if (me->query("shen")<0)
@@ -192,4 +192,3 @@ mixed ask_jian()
         add("count",-1);
         return 1;
 }
-

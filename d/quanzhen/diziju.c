@@ -35,7 +35,7 @@ void init()
 
 int do_pull(string arg)
 {
-        object me=this_player();
+        
 
         if( !arg || arg != "cabinet" ) {
                 return notify_fail("你要拉开什么？\n");

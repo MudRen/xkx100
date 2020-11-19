@@ -63,7 +63,7 @@ void create()
 
 int accept_object(object me, object ob)
 {
-	object nowords;
+ 
 
 	if ((string)ob->query("name")!=HIW"寒玉牌"NOR)
 	{
@@ -77,4 +77,3 @@ int accept_object(object me, object ob)
 		return 1;
 	}
 }
-

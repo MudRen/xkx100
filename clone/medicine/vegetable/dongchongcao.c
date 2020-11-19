@@ -27,8 +27,8 @@ void create()
 
 int do_fu(string arg)
 {
-	string what = query("cure");
-	int howmuch = query("amount");
+ 
+ 
 	object me = this_player();
 
 	if(!id(arg)) return notify_fail("你要敷什么？\n");
@@ -46,4 +46,3 @@ int do_fu(string arg)
 		return 1;
 	}
 }
-

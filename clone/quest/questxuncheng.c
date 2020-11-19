@@ -134,7 +134,7 @@ int do_hit(string arg)
 {
         object ob = this_object();
         object me = this_player();
-        int i,j;
+        
         if (!arg || arg != ob->query("id") )
                 return 0;              
          if (!(me->query("id")==ob->query("owner")))
@@ -165,7 +165,7 @@ void die()
 {
         object ob = this_object();
         object me;
-        int pot,exp,score;
+        
         me = query_temp("last_damage_from");       
         if( ob->query("owner")==me->query("id")
         && (int)me->query_condition("dali_xuncheng"))

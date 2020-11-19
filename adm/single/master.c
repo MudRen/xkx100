@@ -131,7 +131,7 @@ void log_error(string file, string message)
     else
         home = LOG_DIR;
 
-    if (strsrch(message, "Warning") == -1)
+    if (strsrch(message, "Warning") < 0)
     {
         if (this_player(1))
         {
@@ -140,8 +140,12 @@ void log_error(string file, string message)
             else
                 efun::write(get_config(__DEFAULT_ERROR_MESSAGE__) + "\n");
         }
+        efun::write_file(home + "log_error", message);
     }
-    efun::write_file(home + "log", message);
+    // if (strsrch(message, "Warning") > 0)
+    // {
+    //     efun::write_file(home + "log", message);
+    // }
 }
 
 // save_ed_setup and restore_ed_setup are called by the ed to maintain

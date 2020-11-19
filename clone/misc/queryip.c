@@ -23,7 +23,7 @@ int connect_to(string arg)
 
 void resolve_callback(string address, string resolved, int key)
 {
-        int ret;
+        
         if (! resolved)
            {
            	//不会了 怎么才能显示

@@ -32,7 +32,7 @@ void create()
 }
 void init()
 {
-	object ob;
+ 
 	if (random(2) == 1)
 	message_vision(HIY "绿营会众悄悄告诉$N：身在绿营心在汉！\n" NOR, 
 		this_player());

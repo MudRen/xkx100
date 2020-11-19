@@ -40,14 +40,13 @@ void create()
 
 string ask_me()
 {
-	mapping fam, skl;
-	object ob;
-	string *sname;
-	int i;
+ 
+ 
+ 
+ 
 
 	object me=this_player();
 	me->set("food", (int)me->max_food_capacity());
 	me->set("water", (int)me->max_water_capacity());
 	return "慢慢吃！别噎住了。";
 }
-

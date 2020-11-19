@@ -30,7 +30,7 @@ void init()
 int do_gua ( string arg )
 {
 	object ob ;
-	string dir;
+ 
 	if( !arg || (arg !="fan" && arg != "fan bu")) 
 	{
 		tell_object(this_player() , "你要挂啥呢？瞎折腾！\n" ) ;

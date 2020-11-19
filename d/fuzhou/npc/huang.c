@@ -35,7 +35,7 @@ void create()
 
 int accept_object(object who, object ob)
 {
-	object myenv ;
+ 
 	if(who->query_temp("fuwei_diubiao_ask")&&(ob->query("money_id") && ob->value() >= 100000))
     {
 		message_vision(HIY"黄老先生对$N说：好吧！就再给你一次机会了！\n"NOR , who);

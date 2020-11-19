@@ -31,7 +31,7 @@ mapping *info_weapon = ({
 	}),
 	"skills": ({
 		"wudu-goufa",
-		"riyu-hook"
+		"ruyi-hook"
 	}),
 ]),
 
@@ -100,13 +100,13 @@ mapping unarmed_skills = ([
 		"fengyun-shou",
 		"shexing-diaoshou",
 		"qianye-shou",
-	}),		
+	}),
 	"strike": ({
 		"chousui-zhang",
 		"cuixin-strike",
 		"wuluo-zhang",
 		"jinding-zhang",
-	}),		
+	}),
 ]);
 
 string *dodge_skills = ({

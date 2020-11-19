@@ -55,7 +55,7 @@ void create()
 
 void init()
 {
-        object me,ob;
+        object me;
         ::init();
         if (interactive(me = this_player()))
         {
@@ -64,4 +64,3 @@ void init()
                 call_out("kill_ob", 1, me);
         }
 }
-

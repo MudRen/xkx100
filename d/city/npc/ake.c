@@ -95,7 +95,7 @@ int do_pawn(string arg)
 	string term, *terms;
 	string data;
 	int value, pawn_count, i;
-	int rvalue;
+ 
 	mapping pawn;
 	object me;
 	me = this_player();
@@ -283,4 +283,3 @@ int do_redeem(string arg)
 	} else return notify_fail("阿珂道：你的钱不够。\n");
 
 }
-

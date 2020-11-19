@@ -56,7 +56,7 @@ int ask_supu()
 
 int ask_parent()
 {
-	object map;
+ 
 	object me = this_player(); 
 	if ((int)this_player()->query_temp("marks/李1"))
 	{
@@ -73,8 +73,8 @@ int ask_parent()
 
 int ask_gaochang()
 {
-	object map, me = this_player(), ob = this_object();
-	int exp,pot,score;
+ object  me = this_player(), ob = this_object();
+ 
 	if (query("map_count") < 1)
 	{
 		say("李文秀一愣，忙道：地图？我没说过什么地图啊。\n");	

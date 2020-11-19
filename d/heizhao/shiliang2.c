@@ -24,7 +24,7 @@ LONG );
 
 int valid_leave(object me, string dir)
 {
-	object *inv, ob;
+ object *inv;
 	int i;
 
 //	if(wizardp(me)) return 1;

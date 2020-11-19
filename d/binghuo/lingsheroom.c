@@ -24,7 +24,7 @@ void init()
 {
 	object weapon, ob, me = this_player();
 	mapping weapon_prop;
-	string *apply, type;
+ string *apply;
 
 	if(objectp(ob = present("dai yisi", environment(me))) && living(ob))
 	{
@@ -49,4 +49,3 @@ void init()
 		}
 	}
 }
-

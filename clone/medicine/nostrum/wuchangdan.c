@@ -25,9 +25,9 @@ void create()
 
 int do_eat(string arg)
 {
-	int fw;
-	int force_limit, neili_limit, force_skill, add_skill, improve;
-	int nowcondition;
+ 
+ int force_limit, neili_limit, force_skill;
+ 
 
 	object me = this_player();
 
@@ -62,4 +62,3 @@ int do_eat(string arg)
 	me->start_busy(2);
 	return 1;
 }
-

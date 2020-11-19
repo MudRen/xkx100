@@ -56,7 +56,7 @@ string ask_me()
 int do_join(string arg)
 {
 	object ob;
-	mapping party;
+ 
 
 	ob = this_player () ;
 	if( !arg || arg!="yipintang" )

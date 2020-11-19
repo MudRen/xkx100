@@ -35,7 +35,7 @@ int recognize_apprentice(object ob)
 
 int accept_object(object who, object ob)
 {
-	object me = this_player();
+ 
 	if (!(int)who->query_temp("mark/冯"))
 		who->set_temp("mark/冯", 0);
 	if (ob->query("money_id") && ob->value() >= 1000) {
@@ -44,4 +44,3 @@ int accept_object(object who, object ob)
 		return 1;
 	}
 }
-

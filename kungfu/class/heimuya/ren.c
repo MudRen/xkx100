@@ -83,7 +83,7 @@ void create()
 int ask_bijian()
 {
 	object weapon, obj, me = this_player(), ob = this_object();
-	int i;
+ 
 
         if (!objectp(weapon = ob->query_temp("weapon")))
 	{
@@ -214,4 +214,3 @@ void attempt_apprentice(object ob)
 	else
 		command("say 好吧，我先看看你的剑法吧。");
 }
-

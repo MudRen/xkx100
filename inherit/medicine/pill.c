@@ -10,8 +10,8 @@ void init()
 
 int do_eat(string arg)
 {
-	string what = query("cure");
-	int howmuch = query("amount");
+ 
+ 
 
 	if (!id(arg))
 		return notify_fail("你想吃什么？\n");
@@ -55,4 +55,3 @@ int do_pour(string arg)
 	destruct(this_object());
 	return 1;
 }
-

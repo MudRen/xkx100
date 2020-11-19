@@ -28,7 +28,7 @@ void init()
 
 int do_zhi(string arg)
 {
-	object *inv, obj, weapon, me = this_player();
+ object *inv, obj, me = this_player();
 	int attacklvl, dodgelvl, parrylvl, equip;
 	string msg;
 	object piece;
@@ -99,4 +99,3 @@ int do_zhi(string arg)
 	this_object()->move(environment(me));
 	return 1;
 }
-

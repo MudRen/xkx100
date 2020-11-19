@@ -131,7 +131,7 @@ int ask_heal()
 {
 	object ob = this_player();
 	object me = this_object();
-	object where;
+ 
 
         if(me->is_fighting()|| me->query_temp("busy"))
          {
@@ -197,7 +197,7 @@ int ask_poison()
 {
 	object ob = this_player();
 	object me = this_object();
-	object where;
+ 
 
         if(me->is_fighting()|| me->query_temp("busy"))
          {
@@ -291,7 +291,7 @@ int recover_III(object ob)
 }
 string ask_book()
 {
-	mapping fam; 
+  
 	object ob;
 	
 	if (query("bookcount") < 1)

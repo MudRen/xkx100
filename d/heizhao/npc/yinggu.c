@@ -81,7 +81,7 @@ string ask_book()
 
 string ask_yideng()
 {
-	mapping fam; 
+  
 	object ob;
 	
 	if (query("yideng_count") < 1)

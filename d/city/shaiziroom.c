@@ -560,7 +560,7 @@ int do_look(string arg)
 	object zhuang;
 	object *inv = all_inventory(this_object());
 	int i;
-	object me = this_player();
+ 
 
 	if(arg == "table")
 	{

@@ -27,9 +27,9 @@ void create()
 
 int do_shot(string arg)
 {
-	object obj,weapon;
+ object obj;
 	object me = this_player();
-	int lv1,lv2,lv3,lv4,damage;
+ 
 	int tired;
 
 	if (environment(me)->query("no_fight"))
@@ -53,4 +53,3 @@ int do_shot(string arg)
 	destruct(this_object());
 	return 1;
 }
-

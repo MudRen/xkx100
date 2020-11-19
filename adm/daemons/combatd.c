@@ -198,7 +198,7 @@ varargs void report_status(object ob, int effective)
 // skill. This value is used for A/(A+B) probability use.
 varargs int skill_power(object ob, string skill, int usage)
 {
-	int status, level, power, dex, str, exp;
+ int  level, power, dex, str, exp;
 	float dpower;
 	string dskill;
 
@@ -747,7 +747,7 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type,s
 //
 void fight(object me, object victim)
 {
-	object ob;
+ 
 	string result;
 
 // 比武现场转播 start
@@ -1001,9 +1001,9 @@ void winner_reward(object killer, object victim)
 
 void killer_reward(object killer, object victim)
 {
-	string vmark, temp, msg="莫名其妙地死了", quest_master = "";
+ string vmark, msg="莫名其妙地死了", quest_master = "";
 	mapping quest, actions;
-	int bls, exp, pot, score, bonus, factor, level, student_num;
+ int bls, exp, pot, score, bonus, factor;
   object weapon,faintby;
   string msg1;
 	// Call the mudlib killer apply.

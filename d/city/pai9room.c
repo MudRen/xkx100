@@ -339,9 +339,9 @@ void start_play()
 
 void end_play()
 {
-	int i,j,k,tmp,tmp2,tile,wager;
+ int i,wager;
 	string area,str,str2;
-	object *inv,bigcheese,mtype;
+ object *inv,mtype;
 
 	inv=all_inventory(find_object(__FILE__));
 

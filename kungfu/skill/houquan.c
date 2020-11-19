@@ -7,7 +7,7 @@ string type() { return "martial"; }
 string martialtype() { return "skill"; }
 
 mapping *action = ({
-([	"action" : "\$N单腿微曲，忽的向前扑出，一式"HIM"「仙猴摘桃」"NOR"，二爪直出，抓向$n的双眼",
+([	"action" : "$N单腿微曲，忽的向前扑出，一式"HIM"「仙猴摘桃」"NOR"，二爪直出，抓向$n的双眼",
 	"lvl" : 0,
 	"skill_name" : "横空出世"
 ]),
@@ -19,7 +19,7 @@ mapping *action = ({
 	"lvl" : 15,
 	"skill_name" : "猿臂轻舒"
 ]),
-([	"action" : "\n$N忽然缩成一团，使一式"CYN"「八方幻影」"NOR"，双掌无形无定，一爪抓向$n的胸口",
+([	"action" : "$N忽然缩成一团，使一式"CYN"「八方幻影」"NOR"，双掌无形无定，一爪抓向$n的胸口",
 	"lvl" : 15,
 	"skill_name" : "八方幻影"
 ]),
@@ -110,7 +110,7 @@ int help(object me)
 	write(@HELP
 
     武林前辈模仿猿猴扑击动作而创出的一套拳法，以轻灵翔动为
-其主要特点。 
+其主要特点。
     猴拳为天地会云龙门武功。
 
 	学习要求：
@@ -121,4 +121,3 @@ HELP
 	);
 	return 1;
 }
-

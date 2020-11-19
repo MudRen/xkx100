@@ -76,8 +76,8 @@ int do_sort(string arg)
 	object *fighter=({});
 	object ob;
 	int i,j;
-	int *exp;
-	string *name;
+ 
+ 
 	
 	if (!arg) return 0;
 	list = explode(arg," ");
@@ -147,7 +147,7 @@ int do_kick(string arg)
 }
 int do_heal(string arg)
 {
-	object ob, me, obj;
+ object ob, me;
 
 	me = this_player();
 	if (!arg) return notify_fail("<Syntax>: heal <player id>\n");

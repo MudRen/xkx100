@@ -10,6 +10,9 @@
 #define WELCOME			"/adm/etc/welcome"
 #define NEW_PLAYER_INFO		"/adm/etc/new_player"
 #define UNREG_MOTD		"/adm/etc/unreg_motd"
+#ifdef MOTD
+#undef MOTD
+#endif
 #define MOTD			"/adm/etc/motd"
 
 #define GAOSHOU			"/data/gaoshou"
@@ -35,7 +38,7 @@
 // By Annihilator (05-26-95)
 #define ROBOT_CHECK			"/d/wiz/courthouse"
 
-// This defines the minimum wiz_level of users that are allowed to 
+// This defines the minimum wiz_level of users that are allowed to
 // enter the mud. Note players has wiz_level 0.
 #define WIZ_LOCK_LEVEL 0
 

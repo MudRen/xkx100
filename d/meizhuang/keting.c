@@ -36,7 +36,7 @@ void init()
 }
 int do_zuan(string arg)
 {
-	string dir;
+ 
 	object me=this_player();
 
 	if( !arg || arg=="" )

@@ -31,7 +31,7 @@ void init()
 }
 int do_push(string arg)
 {
-	string dir;
+ 
 	object me=this_player();
 
 	if( !arg || arg=="" ) {write("你想推什么？\n");return 1;}

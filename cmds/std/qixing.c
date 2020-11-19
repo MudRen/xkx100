@@ -21,10 +21,10 @@
 #include <ansi.h>
 int main(object me, string arg)
 {
-	string msg, enemy, ob1, ob2, ob3, ob4, ob5, ob6;
+ string  enemy, ob1, ob2, ob3, ob4, ob5, ob6;
 	string myname=me->query("name");
 	object en, obj1, obj2, obj3, obj4, obj5, obj6, *obs;
-	int i, j, power;
+ int i;
 	if( environment(me)->query("no_fight") )
 		return notify_fail("这里不准战斗。\n");
 	if( !arg )
@@ -223,4 +223,3 @@ message_vision("$N作了个楫道：贫道先告退了！说完就快步离开�
 	}
 	me->dismiss_team();
 }
-

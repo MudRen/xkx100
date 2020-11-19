@@ -54,7 +54,7 @@ void init()
 
 int do_look(string arg)
 {
-	object me = this_player();
+ 
 	if (arg == "east" || arg == "west" || arg == "south" || arg == "north")
 	{
 		write(HIC"桃花阵"NOR" -
@@ -66,4 +66,3 @@ int do_look(string arg)
 	}
 	return 0;
 }
-

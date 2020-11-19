@@ -27,7 +27,7 @@ void create()
 void init()
 {	
 	object ob; 
-	mapping myfam; 
+  
 	ob = this_player();
 	::init();
 	remove_call_out("greeting");
@@ -53,4 +53,3 @@ string ask_me()
 	}
 	else return "“你胡说八道什么？”\n";
 }
-

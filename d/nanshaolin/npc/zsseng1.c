@@ -35,7 +35,7 @@ string ask_me()
 	mapping fam, my_fam, skl; 
 	object me,fighter,room, monk;
 	string *sname;
-	int i,j;
+ int j;
 
 	fighter = this_player();
 	me = this_object();
@@ -114,7 +114,7 @@ void waiting(object me)
 
 int preparing(object me, object fighter)
 {
-	object monk, room, ob;
+ object  room;
 
 	if(!( room = find_object("/d/nanshaolin/xcping")) )
 		room = load_object("/d/nanshaolin/xcping");
@@ -186,7 +186,7 @@ int fighting(object me, object fighter, int count)
 
 int do_recruit(object me, object fighter)
 {
-	mapping ft_fam, my_fam;
+ 
 
 	fighter->delete_temp("beat_count");
 	fighter->delete_temp("fighting");
@@ -217,4 +217,3 @@ int do_back(object me)
 	me->move("/d/nanshaolin/xcping");
 	return 1;
 } 
-

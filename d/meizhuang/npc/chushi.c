@@ -40,10 +40,10 @@ void create()
 }
 
 string ask_me()
-{       mapping fam, skl;
-	object ob;
-	string *sname;
-	int i;
+{       mapping fam;
+ 
+ 
+ 
 
 	object me=this_player();
 	if(!(fam = me->query("family")) || fam["family_name"] != "黑木崖")
@@ -54,4 +54,3 @@ string ask_me()
 
 	return "慢慢吃！别噎住了。";
 }
-

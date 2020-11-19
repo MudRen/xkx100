@@ -35,7 +35,7 @@ int do_bihua(string arg)
 	object weapon;
 	object me=this_player();
 	int hookskill=(int)me->query_skill("hook", 1);
-	int maxlevel, exp=(int)me->query("combat_exp");
+ int  exp=(int)me->query("combat_exp");
 
 	if( !arg || arg != "picture")
 		return notify_fail("你乱比划什么？\n");
@@ -69,4 +69,3 @@ int do_bihua(string arg)
 	me->receive_damage("qi", 30);
 	return 1;
 }
-

@@ -21,8 +21,8 @@ void init()
 int do_dakai(string arg)
 {
 	object bu, me = this_player();
-	string message;
-	int col;
+ 
+ 
 
 	if(!id(arg)) return notify_fail("你要拆什么？\n");
 	if(!present(this_object(), me))
@@ -33,4 +33,3 @@ int do_dakai(string arg)
 	destruct(this_object());
 	return 1;
 }
-

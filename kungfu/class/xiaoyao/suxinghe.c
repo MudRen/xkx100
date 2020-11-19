@@ -115,7 +115,7 @@ void attempt_apprentice(object ob)
 
 string ask_book()
 {
-	object me,ob;
+ object ob;
 	mapping fam; 
 	ob=this_player();
 	if (!(fam = ob->query("family")) 
@@ -128,7 +128,7 @@ string ask_book()
 }
 string ask_me()
 {
-	object me,ob;
+ object ob;
 	mapping fam; 
 	ob=this_player();
 	if (!(fam = ob->query("family")) 

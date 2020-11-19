@@ -100,9 +100,9 @@ void init()
 string ask_fan()
 {
 	mapping fam;
-	object *allob,env,ob,me=this_player();
-	string *sname;
-	int i, count, here = 0;
+ object ob,me=this_player();
+ 
+ 
 
 	if (!(fam = me->query("family")) || fam["family_name"] != "明教")
 		return RANK_D->query_respect(me) +

@@ -57,7 +57,7 @@ int ask_for_gongzi()
 {
         object me,payment;
         int paytimes;
-	string oldtitle;
+ 
 
         me = this_player();
 	if (me->query("guard") == "镇南王府武将") 
@@ -76,4 +76,3 @@ int ask_for_gongzi()
 	tell_object(me,"霍先生道：欺负我老糊涂？等你升到武将再来领工资！\n");
         return 1;
 }
-

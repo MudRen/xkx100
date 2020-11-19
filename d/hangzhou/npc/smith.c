@@ -26,7 +26,7 @@ void create()
 }
 void init()
 {
-	object ob,me;
+ object ob;
 
 	::init();
 	if( interactive(ob = this_player()) && !is_fighting() )

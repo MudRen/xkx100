@@ -168,7 +168,7 @@ int do_jiangchu(string arg)
 
 int do_renming(string arg)
 {
-	object where, ob, pai, me = this_player();
+ object where, ob, me = this_player();
 	string obname, rankname, partynm;
 	int i, mylvl, oblvl;
 
@@ -228,7 +228,7 @@ int do_renming(string arg)
 
 int do_quzhu(string arg)
 {
-	object *inv, pai, ob, me = this_player();
+ object *inv, ob, me = this_player();
 	string partynm;
 	int i, j, mylvl, oblvl;
 
@@ -272,9 +272,9 @@ int do_quzhu(string arg)
 
 int do_tuichu()
 {
-	object *inv, pai, me = this_player();
+ object  me = this_player();
 	string partynm;
-	int i, j, mylvl;
+ int  mylvl;
 
 	if( me->is_busy() )
 		return notify_fail("你上一个动作还没有完成！\n");
@@ -357,9 +357,9 @@ int do_chengchu(string arg)
 }
 int do_rangwei(string arg)
 {
-	object *inv, pai, ob, me = this_player();
+ object *inv, ob, me = this_player();
 	string partynm;
-	int i, j, mylvl, oblvl;
+ int i, j, mylvl;
 
 	if(!arg) return notify_fail("你要让位给谁？\n");
 	if(!me->query("party"))

@@ -6,7 +6,7 @@ inherit NPC;
 void create()
 {
 	string weapon;
-	int i;
+ 
 
 	set_name("陌生镖头", ({ "fake biaotou" }) );
 	set("title", HIR"福"HIC"威"YEL"镖局"HIY"镖头"NOR);
@@ -28,4 +28,3 @@ void create()
 	carry_object(weapon);
 	carry_object("/clone/misc/cloth")->wear();
 }
-

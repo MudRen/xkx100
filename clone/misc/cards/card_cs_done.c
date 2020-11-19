@@ -27,8 +27,8 @@ void init()
 int do_dakai(string arg)
 {
         object me = this_player();
-        string message;
-        int col;
+        
+        
 
         if (!present(this_object(), this_player()))
                 return 0;

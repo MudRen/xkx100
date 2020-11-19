@@ -120,7 +120,7 @@ void attempt_apprentice(object ob)
 int peiyao()
 {
 	object me = this_player();
-	object ob = this_object();
+ 
 	object obj;
 	int i;
 
@@ -144,9 +144,9 @@ int peiyao()
 int liandan()
 {
 	object me = this_player();
-	object ob = this_object();
+ 
 	object obj;
-	int i;
+ 
 	if(!objectp(present("liuhuang",me)))
 	{
 		command("say 你的身上没有炼制霹雳弹用的硫磺。");

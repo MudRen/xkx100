@@ -111,7 +111,7 @@ int do_kaifa(string arg)
 
 	object ob = this_object();
 	object me = this_player();
-	string msg;
+ 
 	int pro_num, lvl_num,add_num,me_score,me_balance;
 	int ob_people,ob_taxrate,ob_technology,ob_fealty;
 //	kaifa,money,i;

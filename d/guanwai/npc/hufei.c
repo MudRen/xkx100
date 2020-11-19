@@ -126,7 +126,7 @@ void do_kill(object ob)
 
 int accept_object(object me, object ob)
 {
-	int i;
+ 
 	if( !me || environment(me) != environment() ) return 0;
 	if ( !objectp(ob) ) return 0; 
 	if ( !present(ob, me) ) return notify_fail("你没有这件东西。");
@@ -164,4 +164,3 @@ string ask_book()
 	}
 
 }
-

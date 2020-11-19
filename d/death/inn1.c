@@ -1,9 +1,9 @@
 // Room: /d/death/inn1.c
- 
-#include <ansi.h> 
+
+#include <ansi.h>
 inherit ROOM;
 int do_stuff(object ob);
- 
+
 void create()
 {
 	set("short", "小店");
@@ -17,7 +17,7 @@ LONG NOR);
         set("exits", ([ /* sizeof() == 1 */
 		"east" : __DIR__"difu2",
 	]));
- 
+
 	set("item_desc", ([
 		"shadows" : @SHADOWS
 从你站的位置很难辨别出那几个人的容貌，四个披著黑斗蓬的人斜靠在壁
@@ -30,12 +30,12 @@ SHADOWS
 	setup();
 //	replace_program(ROOM);
 }
- 
+
 void init()
 {
 	add_action("redirect_ask","ask");
 }
- 
+
 int redirect_ask(string str)
 {
 	object ob;
@@ -51,7 +51,7 @@ int redirect_ask(string str)
 	else return 0;
 	return 0;
 }
- 
+
 int do_stuff(object ob)
 {
 	if (random (10) <8)
@@ -64,7 +64,7 @@ int do_stuff(object ob)
 		"往壁炉那走去，和一群黑影般的人不知说了些什麽。\n",
 		({this_object(), ob}));
 	tell_room(environment(ob),
-		"一眨眼的功\夫"+(string)ob->query("name")+"竟然不见了。\n",
+		"一眨眼的功夫"+(string)ob->query("name")+"竟然不见了。\n",
 		({this_object(), ob}));
 	write("那人一句话也不说就往你这边撞过来，你眼前一阵黑....\n");
 	ob->reincarnate();

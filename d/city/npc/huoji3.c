@@ -109,7 +109,7 @@ string price_string(int v)
 }
 int do_buy(string what)
 {
-	int i, amount, value, val_factor;
+ int i, amount, val_factor;
 	string ob_file;
 	object ob, me = this_player();
 	mapping goods;
@@ -240,9 +240,9 @@ int ask_send()
 }
 int do_send(string arg)
 {
-	object tar, ob_flower, send_flower, me=this_player();
-	int i, k, money_amount;
-	mapping flower, *flowers;
+ object  ob_flower, send_flower, me=this_player();
+ int  money_amount;
+ mapping flower;
 	string flower_name, who;
 
 	if( !arg || sscanf(arg, "%s to %s", flower_name, who)!=2 )

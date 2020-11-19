@@ -308,7 +308,7 @@ string ask_huoyan()
 string ask_ding()
 {
 	mapping fam; 
-	object ob;
+ 
 	
 	if (!(fam = this_player()->query("family")) ||
 		fam["family_name"] != "星宿派")
@@ -333,7 +333,7 @@ string ask_ding()
 string ask_azi()
 {
 	mapping fam; 
-	object ob;
+ 
 	
 	if (!(fam = this_player()->query("family")) ||
 		fam["family_name"] != "星宿派")

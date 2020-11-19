@@ -57,7 +57,7 @@ add_action("do_thrust","stab");
 
 int do_thrust(string arg)
 {
-	object room, me, man, lma;
+ object room, man, lma;
 	if( !arg || arg!="wall" ) return notify_fail("你要刺什么？\n");
 
 	if(!present("blade" , this_player())

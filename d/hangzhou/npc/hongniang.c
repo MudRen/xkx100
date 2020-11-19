@@ -36,7 +36,7 @@ void create()
 
 void init()
 {
-	object ob;
+ 
 
 	::init();
 	add_action("do_marry", "marry");
@@ -45,8 +45,8 @@ void init()
 
 int do_marry(string arg)
 {
-	object marry_card1,marry_card2, obj, me;
-	object *list,ob;
+ object  obj, me;
+ object *list;
 	int i, have_marry;
 	me = this_player();
 	list = all_inventory(me);
@@ -131,10 +131,10 @@ int do_marry(string arg)
 int do_unmarry(string arg)
 {
 	object me = this_player();
-	object ob, couple_ob;
-	int i, have_marry;
-	string target, tmpstr1, tmpstr2,str1,str2;
-	string cardname;
+ object  couple_ob;
+ 
+ string  tmpstr1, tmpstr2,str1,str2;
+ 
 
 	if( !environment() || base_name(environment()) != query("startroom") )
 		return notify_fail("红娘笑道: 真是抱歉，请您等一下到红娘庄来找我吧。\n");
@@ -195,4 +195,3 @@ int do_unmarry(string arg)
 
 	return 1;
 }
-

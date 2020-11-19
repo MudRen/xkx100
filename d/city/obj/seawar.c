@@ -343,8 +343,8 @@ int view_board(object who,string which)
 {
 	string b;
 	object ob;
-	mixed *v;
-	int i,see;
+ 
+ int see;
 
 	ob = get_player(which);
 	if(!ob)
@@ -418,8 +418,8 @@ void init()
 
 int do_reset(string arg)
 {
-	mixed *idx;
-	int i;
+ 
+ 
 
 	if(!this_object()->id(arg))
 		return 0;
@@ -437,8 +437,8 @@ int do_reset(string arg)
 
 int do_start(string arg)
 {
-	mixed *idx;
-	int i;
+ 
+ 
 
 	if(!is_playing(this_player()))
 		return notify_fail("你都不玩啊！\n");
@@ -450,8 +450,8 @@ int do_start(string arg)
 
 int do_view(string arg)
 {
-	mixed *idx;
-	int i;
+ 
+ 
 
 	if(!is_playing(this_player()))
 	{
@@ -577,7 +577,7 @@ int do_unplace(string arg)
 
 int do_finish(string arg)
 {
-	int i,x,y;
+ 
 	mixed *sh;
 	string id;
 

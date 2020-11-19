@@ -143,7 +143,7 @@ int do_lunzhi(string arg)
 
 int do_zhongcai(string arg)
 {
-	object ob=this_player(), me=this_object();
+ object ob=this_player();
 
 	if(!arg || arg != "ok") return 0;
 	if(!ob->query_temp("mark/浇完")) return 0;
@@ -158,4 +158,3 @@ int do_zhongcai(string arg)
 	}
 	return notify_fail("方相问道：你刚才进去服侍方丈了？\n");
 }
-

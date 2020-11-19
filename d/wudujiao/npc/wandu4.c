@@ -31,7 +31,7 @@ void create()
 }
 void init()
 {
-        object me,ob;
+        object me;
         add_action("do_train", "xun");
         if (interactive(me = this_player()) && 
             (string)me->query("family/family_name") != "五毒教")

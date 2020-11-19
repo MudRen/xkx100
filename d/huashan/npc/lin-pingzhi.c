@@ -60,8 +60,8 @@ void create()
 void die()
 {
         object corpse, killer;
-        int i;
-        string skill;
+        
+        
         object book;
 
         if( !living(this_object()) ) revive(1);

@@ -96,7 +96,7 @@ int do_sell(string arg)
 {
 	object ob, myenv;
 	int value;
-	object *inv;
+ 
 	
 	if (!arg || !(ob = present(arg, this_player())))
 		return notify_fail("你要卖什么？\n");
@@ -124,4 +124,3 @@ int do_sell(string arg)
 	ob->set("class", "prostitute");
 	return 1;
 }
-

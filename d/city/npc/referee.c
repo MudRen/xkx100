@@ -97,8 +97,8 @@ int do_start(string arg)
 {
 	int i,j;
 	string str1,str2;
-	object *allob, ob1, ob2, old_target, where;
-	mapping armors;
+ object *allob, ob1, ob2;
+ 
 	object weapon;
 	object armor;
 	string *inv;
@@ -312,7 +312,7 @@ void check(object ob1, object ob2)
 
 int observe(object ob1,object ob2)
 {
-	object ob;
+ 
 	int obqi1, obmqi1, obqi2, obmqi2;
 	string str;
 

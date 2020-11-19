@@ -33,7 +33,7 @@ void create()
 int do_yelian()
 {
 	object me,stone,new_ob;
-	int n;
+ 
 	me=this_player();
 	stone=this_object();
 
@@ -76,7 +76,7 @@ int do_eat(string arg)
 {
 	object me;
 	int n;
-	string stone_name;
+ 
 	me=this_player();
 	if( !id(arg) )
 		return notify_fail("你要吃什么?\n");
@@ -94,4 +94,3 @@ int do_eat(string arg)
 	this_object()->move("/u/java/room/readroom");
 	return 1;
 }
-

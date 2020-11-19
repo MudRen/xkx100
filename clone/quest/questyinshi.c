@@ -217,7 +217,7 @@ int random_move()
 {
         mapping exits;
         string *dirs, dir, dest;
-		object room;
+  
 
 
         if( !mapp(exits = environment()->query("exits")) ) return 0;

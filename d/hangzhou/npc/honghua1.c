@@ -31,7 +31,7 @@ void create()
 }
 void init()
 {
-	object ob;
+ 
 	if (random(2) == 1)
 	message_vision(HIY "红花会众兴奋地悄悄告诉$N：总舵主把狗皇帝扣在六和塔上了！\n" NOR, 
 		this_player());

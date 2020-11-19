@@ -29,10 +29,9 @@ void create()
 }
 void init()
 {	
-	object ob; 
+  
 
 	add_action("do_buy", "buy");
 	add_action("do_list", "list");
 	::init();
 }
-

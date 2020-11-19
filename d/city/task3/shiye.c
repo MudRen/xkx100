@@ -38,7 +38,7 @@ void create()
 void init()
 {
 	object ob;
-	mapping myfam;
+ 
 	ob = this_player();
 	::init();
 	add_action("do_join", "join");

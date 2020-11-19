@@ -1,7 +1,7 @@
 // snpnpc.c
 int main(object me, string arg)
 {
-        string cname,ccmds;
+        
         object ob,snpee;
         string snoopee;
         seteuid(getuid());

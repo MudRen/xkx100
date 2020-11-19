@@ -35,7 +35,7 @@ void create()
 }
 void init()
 {
-        object me,ob;
+        object me;
         add_action("do_train", "xun");
         if (interactive(me = this_player()))
         {
@@ -64,4 +64,3 @@ int do_train(string arg)
         message_vision("藏獒本来就是人驯养的，你有没有搞错哦？\n\n", who,me);
         return 1;
 }
-

@@ -25,7 +25,7 @@ varargs void drool(string msg, string who);
 
 void create()
 {
-        string name, id;
+        
 
         set_name("天马行空", ({ "skywalker" }) );
         set("title", "普通百姓");
@@ -95,7 +95,7 @@ string make_reply()
 
 void relay_channel(object ob, string channel, string msg)
 {
-        string who, phrase;
+        string who;
 
         if( !userp(ob) || (channel != "chat") ) return;
         who = ob->query("name");
@@ -109,7 +109,7 @@ void relay_channel(object ob, string channel, string msg)
 
 void relay_say(object ob, string msg)
 {
-        string who, phrase;
+        string who;
 
 //        if( !userp(ob) ) return;
         who = ob->query("name");
@@ -380,7 +380,7 @@ void greeting(object ob)
 
 void stealing(object ob)
 {
-      mapping fam; 
+       
  
       if( !ob || environment(ob) != environment() || ob->query_int() > 30 )
             return;
@@ -423,4 +423,3 @@ int do_kill()
     ob->die();
     return 1;
 }
-

@@ -80,7 +80,7 @@ void init()
 
 void greeting(object ob)
 {
-	int eff_qi, max_qi, hurt, i;
+ int eff_qi, max_qi, hurt;
 
 
 	tell_object(ob, "\n平一指抬头看了你几眼。\n");
@@ -251,7 +251,7 @@ int ask_heal()
 {
 	object ob = this_player();
 	object me = this_object();
-	object where;
+ 
 
         if(me->is_fighting())
         {
@@ -319,7 +319,7 @@ int ask_poison()
 {
 	object ob = this_player();
 	object me = this_object();
-	object where;
+ 
 
         if(me->is_fighting())
 	{

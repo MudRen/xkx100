@@ -134,7 +134,7 @@ int do_push(string arg)
 
 int do_say(string arg)
 {
-	string dir;
+ 
 
 	if( !arg || arg=="" ) return 0;
 

@@ -44,7 +44,7 @@ int do_drink(string arg)
 int do_climb(string arg)
 {
 	object 	me;
-	int mlvl;
+ 
 
 	if(!arg || arg != "up")
 	{

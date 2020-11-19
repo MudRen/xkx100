@@ -7,7 +7,7 @@
 private void do_bonus(object room)
 {
         object *obs;
-        object ob;
+        
         string msg;
         int lvl,p_bonus,s_bonus;
         int r,i;

@@ -189,7 +189,7 @@ int do_volunteer()
 }
 void clone_meng(object me)
 {
-	mapping name, hp_status, skill_status, map_status, prepare_status;
+ mapping  hp_status, skill_status, map_status, prepare_status;
 	string *sname, *mname, *pname;	
 	object obj, thief_master, weapon;
 	object *ob_list;
@@ -197,9 +197,9 @@ void clone_meng(object me)
 	string *skillname;
 	object where;
 	int skilllvl,topexp;
-	int i,j,k;
+ int i,j;
 	object *inv;
-	string *family, weapon_type;
+ string  weapon_type;
   string *masters = ({
 	"baituo/ouyangfeng",	//lingshe-zhangfa	shexing-diaoshou hamagong
 	"dali/duanzc",	//duanyun-fu		sun-finger
@@ -392,7 +392,7 @@ void end_guard(object me)
 	object *ob_list;
 	mapping fam;
 	object *ob;
-	string err;
+ 
 	ob = all_inventory(environment(me)); 
 	for(i=0; i<sizeof(ob); i++) 
 	{
@@ -503,9 +503,9 @@ void die()
 
 int accept_object(object who, object ob)
 {
-	object obn, wage;
-	int i, j;
-	string *wanted;
+ object obn;
+ 
+ 
 	if (ob->query("money_id") && ob->value() >= 100*(int)who->query("age") )
 	{
 		if ((string)(who->query("family/family_name")) == "武当派") 
@@ -527,4 +527,3 @@ int accept_object(object who, object ob)
 		}
 	return 0;
 }
-

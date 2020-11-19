@@ -42,7 +42,7 @@ void destme()
 
 int do_ride ( )
 {
-	string dir,dir2;
+ 
 	object ob = this_player () ;
 	if(ob->query("meili")<20)
 	{
