@@ -17,12 +17,12 @@ string query_rank(object ob)
         shen = ob->query("shen");
         age = ob->query("age");
         if ( (fam = ob->query("family")) &&
-		(fam["family_name"] == "少林派" ||
-		fam["family_name"] == "南少林派" ||
-		fam["family_name"] == "峨嵋派" ||
-		fam["family_name"] == "天龙寺" ||
-		fam["family_name"] == "雪山派" ||
-		fam["family_name"] == "恒山派"))
+                (fam["family_name"] == "少林派" ||
+                fam["family_name"] == "南少林派" ||
+                fam["family_name"] == "峨嵋派" ||
+                fam["family_name"] == "天龙寺" ||
+                fam["family_name"] == "雪山派" ||
+                fam["family_name"] == "恒山派"))
                 budd = ob->query_skill("buddhism",1);
 
         switch(ob->query("gender")) {
@@ -203,6 +203,12 @@ string query_respect(object ob)
 {
         int age;
         string str;
+
+        // 正常用不到，主要是处理questd初始化可能造成调用报错
+        if (!objectp(ob))
+        {
+                return "大侠";
+        }
 
         if( stringp(str = ob->query("rank_info/respect")) )
                 return str;
@@ -498,4 +504,3 @@ string query_self_close(object ob)
                         return "小弟我";
         }
 }
-
