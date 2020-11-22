@@ -1,5 +1,6 @@
 *
 author_stats
 domain_stats
+!static
 !MUDVISITOR
 !.gitignore

@@ -36,8 +36,8 @@ varargs int is_killing(string id)
 //This function starts fight between this_object() and ob
 void fight_ob(object ob)
 {
- 
- 
+
+
 
 	if(!ob || ob==this_object()) return;
 	if (environment(ob) != environment(this_object())) return;
@@ -64,7 +64,7 @@ void fight_ob(object ob)
 		}
 	}
 */
-	if( member_array(ob, enemy)==-1 ) 
+	if( member_array(ob, enemy)==-1 )
 		enemy += ({ ob });
 }
 
@@ -104,7 +104,7 @@ void kill_ob(object ob)
 	if ( !this_object()->query("jianxi")&&!this_object()->query("quest_no_guard")&& arrayp(guards = ob->query_temp("guarded")))
 	{
 		guards = filter_array(guards, (: objectp($1)
-		&& living($1) && !$1->query_temp("noliving") 
+		&& living($1) && !$1->query_temp("noliving")
 		&& $1 != this_object()
 		&& present($1, environment())
 		&& !is_fighting($1)
@@ -212,31 +212,37 @@ void remove_all_killer()
 //
 void reset_action()
 {
-	object me,ob;
+	object me, ob;
 	mapping prepare;
 	string type, skill;
 
 	me = this_object();
 	prepare = query_skill_prepare();
-	
-	if( ob = query_temp("weapon") ) type = ob->query("skill_type");
-	else if ( sizeof(prepare) == 0)	type = "unarmed";
-	else if ( sizeof(prepare) == 1)	type = (keys(prepare))[0];
-	else if ( sizeof(prepare) == 2)	
+
+	if (ob = query_temp("weapon"))
+		type = ob->query("skill_type");
+	else if (sizeof(prepare) == 0)
+		type = "unarmed";
+	else if (sizeof(prepare) == 1)
+		type = (keys(prepare))[0];
+	else if (sizeof(prepare) == 2)
 		type = (keys(prepare))[query_temp("action_flag")];
-
-
-	if( stringp(skill = query_skill_mapped(type)) )
+	// debug_message("ob = " + ob);
+	if (stringp(skill = query_skill_mapped(type)))
 	{
-// If using a mapped skill, call the skill daemon.
-		if ( ob )
-			set("actions", (: call_other, SKILL_D(skill), "query_action", me, ob :) );
-		else set("actions", (: call_other, SKILL_D(skill), "query_action" :) );
-	} else
+		// If using a mapped skill, call the skill daemon.
+		if (ob)
+			set("actions", (: call_other, SKILL_D(skill), "query_action", me, ob :));
+		else
+			set("actions", (: call_other, SKILL_D(skill), "query_action" :));
+	}
+	else
 	{
-// Else, let weapon handle it.
-		if( ob ) set("actions", ob->query("actions",1) );
-		else set("actions", query("default_actions",1) );
+		// Else, let weapon handle it.
+		if (ob)
+			set("actions", ob->query("actions", 1));
+		else
+			set("actions", query("default_actions", 1));
 	}
 }
 
@@ -291,7 +297,7 @@ void init()
 			{
 				COMBAT_D->auto_fight(this_object(), ob, "aggressive");
 				return;
-			} 
+			}
 }
 
 int do_ride_none(object me)

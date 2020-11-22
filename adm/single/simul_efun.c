@@ -1,7 +1,7 @@
 // 继承mudcore框架的simul_efun
 inherit CORE_SIMUL_EFUN_OB;
 
-// #include "/adm/simul_efun/atoi.c"
+#include "/adm/simul_efun/override.c"
 #include "/adm/simul_efun/chinese.c"
 #include "/adm/simul_efun/file.c"
 #include "/adm/simul_efun/gender.c"
