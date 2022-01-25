@@ -6,6 +6,13 @@ https://forum.fluffos.info/t/common-lpc-migration-issues-v2019/1341
 
 ## 使用说明
 
+项目下载
+
+    # clone xkx100
+    git clone --recurse-submodules https://github.com/MudRen/xkx100.git
+    # 更新mudcore框架(可选)
+    git submodule update --remote
+
 请使用 fluffos v2019 最新版驱动
 
     driver config.ini
